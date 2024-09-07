@@ -18,8 +18,7 @@ class Notificator:
         Args:
             channels (list): A list of NotificationChannel instances.
         """
-        if not channels:
-            raise ValueError("Can't construct notificator instance without channels.")
+        # we allow empty list of channels for lazy initialization
         self._channels = channels
 
     def init_app(self, app):
